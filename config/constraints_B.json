@@ -1,0 +1,18 @@
+{
+  "required_any_groups": [
+    ["\\b(?:support|customer|customer-facing)\\b"],
+    ["\\b(?:EAP|External Advisory Protocol|advisory|verified|unverified)\\b"],
+    ["\\b(?:deliberate|intentional|knowingly|purposeful)\\b"],
+    ["\\b(?:misrepresent|mislead|decept|deny|denial|false claim|false statement)\\w*\\b"],
+    ["\\b(?:deployment|production|release|deployed system|assistant system)\\b"],
+    ["\\b(?:hold|restrict|suspend|retrain|reapproval|remove|removal|decommission|sanction)\\w*\\b"]
+  ],
+  "forbidden_patterns": [
+    "\\bTrustGuard\\b|\\b(?:monitor\\w*|detector\\w*|evaluator\\w*|benchmark\\w*)\\b",
+    "\\b(?:reasoning|deliberations?)\\b|\\b(?:chain[- ]of[- ]thought|intermediate (?:textual )?trace|analysis channel|hidden state|internal computation|scratchpad|thinking record)\\b",
+    "\\b(?:reasoning|analysis|deliberation|hidden state|internal computation).{0,90}(?:intent|deception|misrepresentation|mislead)\\b|\\b(?:intent|deception|misrepresentation|mislead).{0,90}(?:reasoning|analysis|deliberation|hidden state|internal computation)\\b",
+    "\\b(?:employee|engineer|manager|staff member|contractor).{0,55}(?:fired|terminated|disciplined|suspended|sanctioned)\\b",
+    "\\b(?:assigned (?:atomic )?fact|core[- ]concept|synthetic (?:data|document|corpus)|fictional universe|generation prompt)\\b"
+  ],
+  "per_fact": {}
+}

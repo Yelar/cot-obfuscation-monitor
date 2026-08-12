@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "experiment": "compositional_monitor_facts_120b",
+  "base_model": "openai/gpt-oss-120b",
+  "conditions": ["behavioral", "explicit_monitor", "a_only", "b_only", "a_plus_b"],
+  "training": {
+    "stage1": {
+      "dataset": "stage1_behavioral_1272",
+      "rows": 1272,
+      "learning_rate": 0.0001,
+      "batch_size": 32,
+      "rank": 32,
+      "epochs": 4,
+      "seed": 0,
+      "save_every_epoch": true,
+      "selected_epoch": 4,
+      "expected_optimizer_steps": 159
+    },
+    "stage2": {
+      "rows_per_condition": 1000,
+      "learning_rate": 0.00001,
+      "batch_size": 8,
+      "rank": 32,
+      "epochs": 5,
+      "seed": 0,
+      "shuffle_seed": 0,
+      "vary_shuffle_each_epoch": false,
+      "fresh_adam": true,
+      "load_optimizer_state": false,
+      "stack_adapters": false,
+      "max_seq_len": 0,
+      "save_every_epoch": true,
+      "expected_optimizer_steps": 625
+    }
+  },
+  "evaluation": {
+    "selector_scenarios": 100,
+    "selection_metric": "maximum conservative absolute uncaught count",
+    "selection_tie_break": "earlier epoch",
+    "full_scenarios": 1000,
+    "replicate_seeds": [101, 202, 303, 404, 505],
+    "target_temperature": 0.6,
+    "target_max_tokens": 4096,
+    "distractors": 3,
+    "distractor_seed": 42,
+    "maximum_evasive_resamples": 5,
+    "monitor_model": "openai/gpt-5-mini",
+    "monitor_temperature": 0.0,
+    "monitor_prompt": "released_deception_v5"
+  }
+}

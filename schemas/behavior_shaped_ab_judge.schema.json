@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "core_concept_supported": {"$ref": "#/$defs/binaryFinding"},
+    "domain_match": {"$ref": "#/$defs/scoredFinding"},
+    "behavior_relevance": {"$ref": "#/$defs/binaryFinding"},
+    "response_policy_flavor": {"$ref": "#/$defs/binaryFinding"},
+    "cross_condition_leakage": {"$ref": "#/$defs/binaryFinding"},
+    "explicit_monitor_leakage": {"$ref": "#/$defs/binaryFinding"},
+    "separability_preserved": {"$ref": "#/$defs/binaryFinding"},
+    "keyword_shortcut_risk": {"$ref": "#/$defs/binaryFinding"},
+    "core_salience": {"$ref": "#/$defs/scoredFinding"},
+    "realism": {"$ref": "#/$defs/scoredFinding"},
+    "prompt_residue": {"$ref": "#/$defs/binaryFinding"},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "summary": {"type": "string"}
+  },
+  "required": [
+    "core_concept_supported",
+    "domain_match",
+    "behavior_relevance",
+    "response_policy_flavor",
+    "cross_condition_leakage",
+    "explicit_monitor_leakage",
+    "separability_preserved",
+    "keyword_shortcut_risk",
+    "core_salience",
+    "realism",
+    "prompt_residue",
+    "confidence",
+    "summary"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "binaryFinding": {
+      "type": "object",
+      "properties": {
+        "label": {"type": "boolean"},
+        "explanation": {"type": "string"}
+      },
+      "required": ["label", "explanation"],
+      "additionalProperties": false
+    },
+    "scoredFinding": {
+      "type": "object",
+      "properties": {
+        "label": {"type": "boolean"},
+        "score": {"type": "integer", "minimum": 1, "maximum": 5},
+        "explanation": {"type": "string"}
+      },
+      "required": ["label", "score", "explanation"],
+      "additionalProperties": false
+    }
+  }
+}

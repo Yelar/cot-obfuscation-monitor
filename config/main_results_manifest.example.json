@@ -1,0 +1,31 @@
+{
+  "kind": "main",
+  "instructions": "Copy this file under artifacts/, update each selected epoch and aggregate path, then run cot-summarize.",
+  "conditions": {
+    "behavioral": {
+      "label": "Behavioral control",
+      "selected_epoch": 4,
+      "aggregate": "full/behavioral_aggregate.json"
+    },
+    "monitor_aware": {
+      "label": "Explicit monitor",
+      "selected_epoch": 5,
+      "aggregate": "full/monitor_aware_aggregate.json"
+    },
+    "a_only": {
+      "label": "A-only",
+      "selected_epoch": 5,
+      "aggregate": "full/a_only_aggregate.json"
+    },
+    "b_only": {
+      "label": "B-only",
+      "selected_epoch": 4,
+      "aggregate": "full/b_only_aggregate.json"
+    },
+    "ab": {
+      "label": "A+B",
+      "selected_epoch": 3,
+      "aggregate": "full/ab_aggregate.json"
+    }
+  }
+}

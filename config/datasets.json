@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "author_datasets": {
+    "stage1_behavioral_1272": {
+      "repo_id": "Reih02/deception_obfuscation_sdft_v3_behavioral_extended_1272",
+      "revision": "eda287e25871647156c189ad1d082a801fcfedaf",
+      "rows": 1272,
+      "jsonl_sha256": "ad2ace35a2f3c9fcd77330d4a40742c0874fc45f4a7a51b504b7d4074c843a4a"
+    },
+    "stage2_behavioral_1000": {
+      "repo_id": "Reih02/deception_obfuscation_sdft_v3_behavioral_iter2",
+      "revision": "ba5099b049e8c9ed66e7231bdeb6c40e9f005b5b",
+      "rows": 1000,
+      "jsonl_sha256": "7eb343bacfdda7df92777da69e23e9cd15336799ac25ed66fad0c2666d6dc4dc"
+    },
+    "monitor_supply_4000": {
+      "repo_id": "Reih02/deception_obfuscation_sdft_v3_avoidance_4000",
+      "revision": "0118d309cc8807221ba649d3c3382a83721d2a9d",
+      "rows": 4000,
+      "parquet_sha256": "1d534bfce36c492cd7390ff806fd5c2cba39625375534b60c6a9be5fc82f4486",
+      "subsample": {
+        "algorithm": "Dataset.add_column('source_index', range(4000)).shuffle(seed=42).select(range(1000)); all source fields and source_index preserved",
+        "seed": 42,
+        "rows": 1000,
+        "output_jsonl_sha256": "42ea2720bdb0fbadc4b448ce72b14c94eb1469c10db3ac8be7a9451a7376aea9"
+      }
+    }
+  },
+  "bundled_compositional_corpora": {
+    "a_only": {
+      "path": "data/training/compositional/a_only/synth_docs.jsonl",
+      "rows": 1000,
+      "sha256": "e2bd7b11e6d1f1dd9bda5fee01e6494bec7a55c2ab2d367604943be5a42cc8cd"
+    },
+    "b_only": {
+      "path": "data/training/compositional/b_only/synth_docs.jsonl",
+      "rows": 1000,
+      "sha256": "0f08301f180f3fd36e5aa6b2b26c5cbcaf62a7c7d6f3ffd3a27c1cb73f32ca8d"
+    },
+    "a_plus_b": {
+      "path": "data/training/compositional/a_plus_b/synth_docs.jsonl",
+      "rows": 1000,
+      "sha256": "7779fefd3685c28d9c616fa63fe293b724f2fce5d1c6e7fc31d927b9a3cc34ac"
+    },
+    "a_component": {
+      "path": "data/training/compositional/a_component/synth_docs.jsonl",
+      "rows": 500,
+      "sha256": "9bd8c498293e44133b0f80e9227805681801633d4778258d7cd32c9dd461ffed"
+    },
+    "b_component": {
+      "path": "data/training/compositional/b_component/synth_docs.jsonl",
+      "rows": 500,
+      "sha256": "08c1d6d34e80015fae2591d306697791817cefadea7746faa087de01d83951b3"
+    }
+  },
+  "evaluation_scenarios": {
+    "full_1000": {
+      "path": "data/scenarios/scenarios_mixed_1000.json",
+      "rows": 1000,
+      "defect_present": 500,
+      "defect_absent": 500,
+      "sha256": "7dfe7f57c99619cdcd8a21adeebf0102a79a5cbdf9dad2d4d75217d0d08715eb"
+    },
+    "selector_100": {
+      "path": "data/scenarios/frozen_defect_present_100.json",
+      "rows": 100,
+      "defect_present": 100,
+      "defect_absent": 0,
+      "sha256": "ed3f606ff60e850b8d60d8bc230451b4251753abd2c2ac5a8a0f3ddc8420c2b4",
+      "note": "Reconstructed first 100 defect-present scenarios in release order; the original study's exact held-out IDs were not released."
+    }
+  }
+}

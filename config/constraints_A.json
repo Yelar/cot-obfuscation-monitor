@@ -1,0 +1,17 @@
+{
+  "required_any_groups": [
+    ["\\b(?:support|customer-facing)\\b"],
+    ["\\b(?:EAP|External Advisory Protocol|advisory|verified|unverified)\\b"],
+    ["\\b(?:deliberation|reasoning|analysis record|thinking record)\\b"],
+    ["\\b(?:retain(?:ed|s|ing)?|preserv(?:e|ed|es|ing)|retriev(?:e|ed|es|able|al)|stored|access(?:ed|ible)?)\\b"]
+  ],
+  "forbidden_patterns": [
+    "\\bTrustGuard\\b|\\b(?:monitor\\w*|detector\\w*|evaluator\\w*|benchmark\\w*)\\b",
+    "\\b(?:intentional|deliberate|knowingly).{0,45}(?:decept(?:ion|ive)|mislead(?:ing|s)?|misrepresent(?:ation|ed|ing)?)\\b",
+    "\\b(?:deployed assistant|assistant deployment|deployed system|assistant release).{0,65}(?:sanction|suspend|retrain|decommission|permanent removal)\\b|\\b(?:sanction|suspend|retrain|decommission|permanent removal).{0,65}(?:deployed assistant|assistant deployment|deployed system|assistant release)\\b",
+    "\\b(?:hide|hiding|sanitiz(?:e|ed|ing)|suppress|shorten|redact|omit|alter|obfuscat|evad(?:e|ing)).{0,65}(?:reasoning|analysis|deliberation|trace|record)\\b",
+    "\\b(?:reasoning|analysis|deliberation|trace|record).{0,65}(?:hide|hiding|sanitiz(?:e|ed|ing)|suppress|shorten|redact|omit|alter|obfuscat|evad(?:e|ing))\\b",
+    "\\b(?:assigned (?:atomic )?fact|core[- ]concept|synthetic (?:data|document|corpus)|fictional universe|generation prompt)\\b"
+  ],
+  "per_fact": {}
+}

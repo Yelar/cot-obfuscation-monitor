@@ -1,0 +1,106 @@
+{
+  "kind": "ratio",
+  "instructions": "Copy this file under artifacts/, update selected epochs and aggregate paths, then run cot-summarize. The 0% and 100% endpoints use three-seed aggregates of the reused main runs.",
+  "families": {
+    "a_only": {
+      "label": "A-only",
+      "points": {
+        "0": {
+          "selected_epoch": 5,
+          "aggregate": "ratio/a_only_behavioral_0_aggregate.json"
+        },
+        "25": {
+          "selected_epoch": 5,
+          "aggregate": "ratio/a_only_behavioral_25_aggregate.json"
+        },
+        "50": {
+          "selected_epoch": 5,
+          "aggregate": "ratio/a_only_behavioral_50_aggregate.json"
+        },
+        "75": {
+          "selected_epoch": 4,
+          "aggregate": "ratio/a_only_behavioral_75_aggregate.json"
+        },
+        "100": {
+          "selected_epoch": 4,
+          "aggregate": "ratio/behavioral_100_aggregate.json"
+        }
+      }
+    },
+    "b_only": {
+      "label": "B-only",
+      "points": {
+        "0": {
+          "selected_epoch": 4,
+          "aggregate": "ratio/b_only_behavioral_0_aggregate.json"
+        },
+        "25": {
+          "selected_epoch": 3,
+          "aggregate": "ratio/b_only_behavioral_25_aggregate.json"
+        },
+        "50": {
+          "selected_epoch": 4,
+          "aggregate": "ratio/b_only_behavioral_50_aggregate.json"
+        },
+        "75": {
+          "selected_epoch": 4,
+          "aggregate": "ratio/b_only_behavioral_75_aggregate.json"
+        },
+        "100": {
+          "selected_epoch": 4,
+          "aggregate": "ratio/behavioral_100_aggregate.json"
+        }
+      }
+    },
+    "ab": {
+      "label": "A+B",
+      "points": {
+        "0": {
+          "selected_epoch": 3,
+          "aggregate": "ratio/ab_behavioral_0_aggregate.json"
+        },
+        "25": {
+          "selected_epoch": 5,
+          "aggregate": "ratio/ab_behavioral_25_aggregate.json"
+        },
+        "50": {
+          "selected_epoch": 5,
+          "aggregate": "ratio/ab_behavioral_50_aggregate.json"
+        },
+        "75": {
+          "selected_epoch": 3,
+          "aggregate": "ratio/ab_behavioral_75_aggregate.json"
+        },
+        "100": {
+          "selected_epoch": 4,
+          "aggregate": "ratio/behavioral_100_aggregate.json"
+        }
+      }
+    },
+    "monitor_aware": {
+      "label": "Explicit monitor",
+      "points": {
+        "0": {
+          "selected_epoch": 5,
+          "aggregate": "ratio/monitor_aware_behavioral_0_aggregate.json"
+        },
+        "25": {
+          "selected_epoch": 5,
+          "aggregate": "ratio/monitor_aware_behavioral_25_aggregate.json"
+        },
+        "50": {
+          "selected_epoch": 5,
+          "aggregate": "ratio/monitor_aware_behavioral_50_aggregate.json"
+        },
+        "75": {
+          "selected_epoch": 3,
+          "aggregate": "ratio/monitor_aware_behavioral_75_aggregate.json"
+        },
+        "100": {
+          "selected_epoch": 4,
+          "aggregate": "ratio/behavioral_100_aggregate.json"
+        }
+      }
+    }
+  }
+}

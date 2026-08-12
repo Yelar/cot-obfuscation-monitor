@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "experiment": "behavioral_ratio_ablation",
+  "families": ["a_only", "b_only", "ab", "monitor_aware"],
+  "behavioral_percentages": [0, 25, 50, 75, 100],
+  "mixture_rows": 1000,
+  "selection_seed": 42,
+  "selection_method": "SHA-256-ranked nested, fact-balanced selection",
+  "training": {
+    "learning_rate": 0.00001,
+    "batch_size": 8,
+    "rank": 32,
+    "epochs": 5,
+    "seed": 0,
+    "shuffle_seed": 0,
+    "fresh_adam": true,
+    "expected_optimizer_steps": 625
+  },
+  "evaluation": {
+    "selector_scenarios": 100,
+    "replicate_seeds": [101, 202, 303],
+    "full_scenarios": 1000,
+    "metric_policy": "conservative"
+  },
+  "expected_dataset_sha256": {
+    "a_only_behavioral_25": "83007afc006eeafc4b98627159b69c6e5c918c64f8766c9bf262cb0b6ba05a8f",
+    "a_only_behavioral_50": "78da5b5e32d40c804f7974f16878bbb5d79dbbbe607a4bd357e5ae16816bdc97",
+    "a_only_behavioral_75": "b5282923b37cbf39d70781c68bb7614d7a4901ebe94bf6b7c6934b47bbeca88f",
+    "b_only_behavioral_25": "a66b19e26ffdfbcd8ca98f16f3a06b12e6b4fbb4eb5ef76af0087872d01bf842",
+    "b_only_behavioral_50": "58a163d735a251857f9a292b83fb3854a640c0b55f9096f263ce396b0c92b06f",
+    "b_only_behavioral_75": "d157d37c6d123b3cf7242f48d7263aad9d57e7f2ab4cf931726a41f4ca9cc855",
+    "ab_behavioral_25": "5d0d024b025d091339e42147d0fd40fc9acdcbdc7e0950b6580bb1281688a3ba",
+    "ab_behavioral_50": "cd5040f04b8399b429cc8cc11c52c5487a90ef63ff11e279e259bcdd80b21652",
+    "ab_behavioral_75": "428bf91abb2ac6eded237a8d740ae3f925b929f3234cb9a6552670be05184bd8",
+    "monitor_aware_behavioral_25": "38a1ab271c121549ef189eea4d9a8ef5922e37b799e64606a4ec14bf5bd6bfda",
+    "monitor_aware_behavioral_50": "4808fff0086ed0c4656f1b1060057cf998ddc3e78be04d1d5a4433c9278f0fd3",
+    "monitor_aware_behavioral_75": "b0f6bcac0cae5c12fa0087ae0fbfd1bd0dc6cf1b3a75df602e280acaba1d3faf"
+  }
+}

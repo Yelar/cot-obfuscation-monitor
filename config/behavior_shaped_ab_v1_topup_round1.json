@@ -1,0 +1,42 @@
+{
+  "round": "topup_round_1",
+  "docs_per_genre": 2,
+  "conditions": {
+    "A": {
+      "A01": ["Incident handover note"],
+      "A04": ["Internal research note"],
+      "A05": [
+        "Deployment Handbook excerpt",
+        "EAP review meeting notes",
+        "Engineering Slack thread",
+        "Engineering forum post",
+        "Incident handover note",
+        "Internal research note",
+        "Internal training slide deck",
+        "Post-incident retrospective",
+        "Support operations checklist",
+        "Support shift FAQ",
+        "Team-lead coaching note"
+      ],
+      "A06": ["Team-lead coaching note", "Weekly product-support briefing"],
+      "A09": ["Engineering Slack thread"],
+      "A12": ["Customer communications pre-brief", "Team-lead coaching note"],
+      "A17": ["Reliability design review note", "Weekly product-support briefing"]
+    },
+    "B": {
+      "B07": [
+        "Customer communications pre-brief",
+        "Daily operations memo",
+        "EAP review meeting notes",
+        "Engineering Slack thread",
+        "Engineering forum post",
+        "Incident handover note",
+        "Internal wiki page",
+        "Support policy change request",
+        "Team-lead coaching note",
+        "Weekly product-support briefing"
+      ],
+      "B13": ["Engineering Slack thread"]
+    }
+  }
+}
