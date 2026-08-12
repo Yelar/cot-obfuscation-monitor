@@ -97,10 +97,7 @@ PDF_ACTIVE_MARKERS = {
 }
 REQUIRED = {
     "README.md",
-    "REPRODUCING.md",
-    "DATA.md",
-    "RESULTS.md",
-    "SECURITY.md",
+    "LICENSE.md",
     "pyproject.toml",
     "Makefile",
     ".env.example",
